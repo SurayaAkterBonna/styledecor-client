@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@layer base {
+  :root {
+    --color-gold-gradient: linear-gradient(135deg, #B38728 0%, #FBF5B7 25%, #DAA520 50%, #F3E5AB 75%, #AA771C 100%);
+    --color-dark-gradient: linear-gradient(180deg, #121212 0%, #0B0B0B 100%);
+    --color-gold-ombre: linear-gradient(90deg, #AA771C, #D4AF37, #F3E5AB);
+  }
+
+  body {
+    background-color: #0B0B0B;
+    color: #F5F5F5;
+    font-family: 'Playfair Display', 'Inter', sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0B0B;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #AA771C, #D4AF37);
+    border-radius: 4px;
+  }
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #B38728 0%, #FBF5B7 50%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-ombre {
+  background: linear-gradient(135deg, #AA771C 0%, #D4AF37 50%, #F3E5AB 100%);
+}
+
+.bg-black-gradient {
+  background: linear-gradient(180deg, #1C1C1C 0%, #0B0B0B 100%);
+}
+
+.border-gold-glow {
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+}
+
+.border-gold-glow:hover {
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.btn-gold {
+  background: linear-gradient(90deg, #AA771C, #D4AF37, #AA771C);
+  background-size: 200% auto;
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.4s ease;
+  border: none;
+}
+
+.btn-gold:hover {
+  background-position: right center;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  transform: translateY(-1px);
+}
